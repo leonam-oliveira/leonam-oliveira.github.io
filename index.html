@@ -1,57 +1,1126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CaPE - Collaboration and Practice Environment</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>CaPE - Collaboration and Practice Environment</h1>
-      <nav>
-        <a href="index.html">Inicial</a>
-        <a href="componentes.html">Componentes</a>
-        <a href="recursos.html">Requisitos e Recursos</a>
-        <a href="acoes.html">Ações</a>
-        <a href="cenarios.html">Cenários</a>
-        <a href="telas.html">Telas</a>
-      </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CaPE - Collaboration and Practice Environment</title>
+    <link href="https://bootswatch.com/5/flatly/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        html {
+           scroll-behavior: smooth;
+           text-align: justify;
+        }
+        .placeholder {
+            height: 50px; /* altura da navbar */
+            display: none;
+        }
+        section:not(:first-of-type)::before {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: #ccc; /* cor discreta */
+            margin: 10px auto 10px auto; /* espaçamento acima e abaixo da linha */
+            width: 80%; /* largura do separador */
+        }
+        #btnTopo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: none;
+            border-radius: 50px;
+            padding: 10px 15px;
+            font-size: 16px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        #btnTopo:hover {
+            opacity: 1;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header class="container-fluid bg-primary text-white">
+        <div id="navbar-placeholder" class="placeholder"></div>
+        <div class="row">
+            <div class="col text-center my-4">
+                <h1>CaPE - Collaboration and Practice Environment</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" id="navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#apresentacao">Apresentação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#componentes">Componentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#requisitos">Requisitos e Recursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acoes">Açoes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cenarios">Cenários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#telas">Telas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+    </header>
+    <section class="container py-5" id="apresentacao">
+        <div class="row">
+            <div class="col">
+                <h1 class="" id="titulo-apresentacao">Apresentação</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Sobre o CaPE</h2>
+               <p>O CaPE, Collaboration and Practice Environmentm, ou Ambiente de Colaboração e Prática é um arcabouço de quatro fases, dividido em Requisitos, Recursos, Ações e Cenários, para propor a colaboração em Ambientes Virtuais de Aprendizagem.A base teórica do arcabouço parte dos estudos de Etienne Wenger na teoria de Aprendizagem Situada e suas Comunidades de Prática.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Fases do CaPE</h2>
+                <ul>
+                    <li><strong>Componentes:</strong>  </li>
+                    <li><strong>Requisitos:</strong> Os requisitos partiram do estudo de Wenger (1999), em que o autor consolida o processo das comunidades de prática a partir de três eixos: engajamento, imaginação e alinhamento. Foram criados sete requisitos a partir dos componentes, cada requisito representando um componente específico. </li>
+                    <li><strong>Recursos:</strong> A partir dos requisitos, foram criados os recursos. Os recursos representam ferramentas computacionais que podem ser aplicadas nos AVAs. São 14 recursos criados a partir dos requisitos.</li>
+                    <li><strong>Ações:</strong> As ações trazem exemplificações possíveis de diferentes papeis do processo educacional, como docente, colega de classe e veteranos de cursos.</li>
+                    <li><strong>Cenários:</strong> Os cenários trazem um uso prático dos recursos. Foram criadas sete personas e para cada uma foi feita uma descrição da persona e uma descrição de cenário, sendo que cada persona era protagonista de um e os outros participantes participavam de forma coadjuvante.</li>
+                    <li><strong>Telas:</strong> As Telas criadas representam a utilização de um possível Ambiente Virtual de Aprendizagem com os recursos do CaPE pelas personas e as situações vividas nos Cenários. </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid mx-auto d-block" src="imagens/ciclo-cape.png" alt="Ciclo do CaPE">
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="componentes">
+        <div class="row">
+            <div class="col">
+                <h1 class="pt-5">Componentes</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <p>Wenger (1999) propõe componentes necessários para que ocorra a aprendizagem nas comunidades de prática a partir de habilidades de engajamento, imaginação e alinhamento. </p>
+                    <p>Nas habilidades de engajamento, busca-se a construção da comunidade, inventividade, socialização e conhecimento emergente e divide-se em mutualidade, competência e continuidade:</p>
+                    <li><strong>Mutualidade:</strong> habilidades de interação, tarefas para serem feitas em conjunto, disponibilidade para ajuda, participação periférica.</li>
+                    <li><strong>Competência:</strong> Iniciativa e conhecimento, exercitar criticidade e avaliação mútua.</li>
+                    <li><strong>Continuidade:</strong> repositórios de informação, documentação e monitoramento, encontros de geração, sistemas de aprendizagem.</li>
+                    <p>Nas habilidades de imaginação, busca-se lidar com uma compreensão mais ampla de um contexto e divide-se em orientação, reflexão e exploração.</p>
+                    <li><strong>Orientação:</strong> localização no espaço, tempo, significado e poder. Por exemplo, mapas e outras ferramentas de visualização, museus, exemplos e organogramas são exemplos de orientação.</li>
+                    <li><strong>Reflexão:</strong> modelos e representações de padrões, habilidades de comparação com outras práticas.</li>
+                    <li><strong>Exploração:</strong> oportunidades e ferramentas para desenvolver a prática, previsão de possíveis futuros e possíveis trajetórias, criar cenários alternativos e simulações.</li>
+                    <p>Nas habilidades de imaginação, busca-se abrir possibilidades de prática além do engajamento, não necessariamente eficaz em conectar o aprendizado a iniciativas mais amplas. A partir do alinhamento é possível ter efeito e contribuição com tarefas que estão além do nosso engajamento e divide-se em convergência, coordenação e jurisdição.</p>
+                    <li><strong>Convergência:</strong> interesses e foco em comum, direção, visão, compreensão compartilhada, liderança, persuasão.</li>
+                    <li><strong>Coordenação:</strong> procedimentos, planos, prazos, transmissão de informação, suporte, coleção de dados, medidas. </li>
+                    <li><strong>Jurisdição:</strong> contratos, mediação, arbitragem, resolução de conflitos.</li>
+
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="container py-5" id="requisitos">
+        <div class="row">
+            <div class="col">
+                <h1 class="pt-5">Requisitos e Recursos</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Versão em Mapa Mental</h2>
+                <img class="img-fluid" src="imagens/cape.svg" alt="Requisitos e recursos">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Versão em Tabela</h2>
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr class="table-primary">
+                            <th colspan="7">Componentes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Mutualidade</td>
+                            <td>2. Competência</td>
+                            <td>3. Continuidade</td>
+                            <td>4. Orientação, Reflexão e Exploração</td>
+                            <td>5. Convergência</td>
+                            <td>6. Coordenação</td>
+                            <td>7. Jurisdição</td>
+                        </tr>
+                        <thead>
+                            <tr class="table-primary">
+                                <th colspan="7">Requisitos</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1. Possibilitar aos estudantes um ambiente colaborativo para interação e solicitação de apoio.</td>
+                            <td>2. Possibilitar aos estudantes um ambiente colaborativo que promova o exercício da crítica e da avaliação formativa.</td>
+                            <td>3. Possibilitar aos estudantes um ambiente para documentar, arquivar e monitorar informações.</td>
+                            <td>4. Possibilitar aos alunos um ambiente com recursos para compreensão, comparação e prática. Sistemas que permitam realizar simulações, ferramentas de visualização e organogramas, por exemplo.</td>
+                            <td>5. Possibilitar aos estudantes um ambiente em que possam compartilhar seus interesses, criações, conteúdos (portfólio).</td>
+                            <td>6. Possibilitar aos estudantes um ambiente em que possam gerenciar sua aprendizagem, com planos, prazos e cronogramas.</td>
+                            <td>7. Possibilitar um ambiente em que professor e estudante consigam mediar e solucionar conflitos, debater e compartilhar conhecimento.</td>
+                        </tr>
+                        <thead>
+                            <tr class="table-primary">
+                                <th colspan="7">Recursos</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</td>
+                            <td>2.1 Ferramenta para que estudantes realizem avaliação por pares.</td>
+                            <td>3.1 Ferramenta para que estudantes armazenem seus trabalhos, arquivos, provas e outras informações das disciplinas cursadas.</td>
+                            <td>4.1 Ferramenta para que estudantes criem múltiplas representações dos conteúdos sendo pensados e aprendidos.</td>
+                            <td>5.1 Ferramenta para que estudantes possam armazenar informações pessoais e de interesse próprio.</td>
+                            <td>6.1 Ferramenta para que estudantes possam gerenciar datas, planos, prazos e cronogramas de atividades, disciplinas, trabalhos e provas.</td>
+                            <td>7.1 Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</td>
+                        </tr>
+                        <tr>
+                            <td>1.2 Ferramenta para que estudantes consigam dialogar com colegas e/ou professores individualmente.</td>
+                            <td>2.2 Ferramenta para que estudantes consigam opinar, debater e receber críticas dos trabalhos desenvolvidos.</td>
+                            <td>3.2 Ferramenta para que estudantes consigam transferir informações adquiridas em outros ambientes virtuais.</td>
+                            <td>4.2 Ferramenta para que estudantes consigam comparar e visualizar diferenças e semelhanças entre informações.</td>
+                            <td>5.2 Ferramenta para que estudantes consigam compartilhar suas informações armazenadas.</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1.3 Ferramenta para que estudantes exponham dúvidas ou possam responder dúvidas de colegas.</td>
+                            <td></td>
+                            <td></td>
+                            <td>4.3 Ferramenta para que estudantes consigam simular e analisar cenários e alternativas.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="acoes">
+        <div class="row">
+            <div class="col">
+                <h1 class="pt-5">Ações</h1>
+                <table class="table table-hover table-striped">
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 1.1: Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com dois colegas</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com um colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com três ou mais colegas.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com um veterano e um colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com dois veteranos e um colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com um veterano, um colega e um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com dois veteranos, cinco colegas e um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com dois professores.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide criar um grupo de estudo com dois veteranos.</td>
+                </tr>
+            </tbody>
+                
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 1.2: Ferramenta para que estudantes consigam dialogar com colegas e/ou professores individualmente.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante decide abrir um chat com um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide abrir um chat com um colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide abrir um chat com um veterano.</td>
+                </tr>
+                
+                </tbody>
+
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 1.3: Ferramenta para que estudantes exponham dúvidas ou possam responder dúvidas de colegas.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante decide postar uma dúvida publicamente para seus colegas.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide postar uma dúvida publicamente para seus professores.</td>
+                </tr>
+                <tr>
+                <td>Um estudante decide postar uma dúvida publicamente para seus colegas e professores.</td>
+                </tr>
+                
+                </tbody>
+                
+            
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 2.1: Ferramenta para que estudantes realizem avaliação por pares.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um outro estudante.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por mais de um estudante.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por mais de um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por mais de um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um estudante e um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um estudante, um professor e um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um professor e um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode solicitar a avaliação de alguma atividade por um estudante e um veterano.</td>
+                </tr>
+                
+                </tbody>
+
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 2.2: Ferramenta para que estudantes consigam opinar, debater e receber críticas dos trabalhos desenvolvidos.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode avaliar a atividade de outro colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode criticar a atividade de outro colega.</td>
+                </tr>
+
+                
+                </tbody>
+
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 3.1: Ferramenta para que estudantes armazenem seus trabalhos, arquivos, provas e outras informações das disciplinas cursadas.</th>
+                
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode armazenar um arquivo no ambiente.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode gerenciar um arquivo no ambiente.</td>
+                </tr>
+
+                
+                </tbody>
+
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 3.2: Ferramenta para que estudantes consigam transferir informações adquiridas em outros ambientes virtuais.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode exportar um arquivo de outro ambiente.</td>
+                </tr>
+                </tbody>
+
+                <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 4.1: Ferramenta para que estudantes criem múltiplas representações dos conteúdos sendo pensados e aprendidos.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode modificar um arquivo disponível no sistema modificando seu conteúdo.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode modificar um arquivo disponível no sistema modificando sua forma de apresentação.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode modificar um arquivo disponível no sistema modificando sua forma de representação.</td>
+                </tr>
+                </tbody>
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 4.2: Ferramenta para que estudantes consigam comparar e visualizar diferenças e semelhanças entre informações.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode comparar dois arquivos do sistema.</td>
+                </tr>
+                </tbody>
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 4.3: Ferramenta para que estudantes consigam simular e analisar cenários e alternativas.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode criar um novo arquivo a partir de informações de arquivos anteriores.</td>
+                </tr>
+                </tbody>
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 5.1: Ferramenta para que estudantes possam armazenar informações pessoais e de interesse próprio.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode enviar arquivos pessoais para o sistema.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode armazenar arquivos pessoais no sistema.</td>
+                </tr>
+                </tbody>
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 5.2: Ferramenta para que estudantes consigam compartilhar suas informações armazenadas.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com outro colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com mais de um colega.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com mais de um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com mais de um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um colega, um professor e um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um colega e um professor.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um colega e um veterano.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um arquivo pessoal com um professor e um veterano.</td>
+                </tr>
+                </tbody>
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 6.1: Ferramenta para que estudantes possam gerenciar datas, planos, prazos e cronogramas de atividades, disciplinas, trabalhos e provas.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode modificar um calendário para adicionar suas informações pessoais.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode gerenciar um calendário próprio.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode compartilhar um calendário próprio com outros membros do ambiente.</td>
+                </tr>
+                </tbody>
+
+
+                    <thead>
+                <tr class="table-primary">
+                    <th colspan="1">Recurso 7.1: Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Um estudante pode criar um fórum para debater com os outros membros do ambiente.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode gerenciar um fórum com os outros membros do ambiente.</td>
+                </tr>
+                <tr>
+                <td>Um estudante pode participar de um fórum com os outros membros do ambiente.</td>
+                </tr>
+                </tbody>
+                
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="cenarios">
+        <div class="row">
+            <div class="col">
+                <h1 class="pt-5">Cenários</h1>
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 1: Maria</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> professora, 32 anos, formada em ciência da computação, mestre e doutora. Maria estuda educação constantemente e busca inovar em sua didática na sala de aula. Suas disciplinas são de introdução a programação, ensinando os conceitos e as técnicas iniciais para alunos de cursos da área de tecnologia da informação, como ciência da computação, engenharia de software, sistemas de informação, entre outros. Como forma de construção do conhecimento e fixação dos debates teóricos em sala de aula, Maria costuma disponibilizar exercícios práticos de resolução de problema para os seus estudantes.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> Maria percebe, desde que começou a lecionar, que existe uma porcentagem de alunos que, mesmo atentos em suas explicações e aplicados na resolução dos exercícios que propõe, não chegam, ou demoram um tempo excessivo, a um aprendizado adequado. Pensando em uma nova metodologia para auxiliar esses estudantes com maior dificuldade, Maria passou a utilizar um ambiente virtual de aprendizagem, onde disponibiliza os exercícios semanais, antes entregues em folhas. Sua tentativa de passar a utilizar uma tecnologia computacional tem relação com a busca por um ambiente em que os estudantes possam ter maior facilidade em interação entre si, tanto os colegas da própria disciplina quanto outros cursando o mesmo curso, considerando que a universidade utiliza o mesmo AVA. Portanto, Maria disponibilizou uma lista de exercícios e abriu um fórum para os estudantes enviarem suas respostas. Este fórum possibilita que os estudantes enviem as respostas de forma privada à professora ou de forma aberta para toda a turma, possibilitando que outros estudantes visualizem suas respostas. Maria acredita que desta forma os estudantes terão acesso à ajuda mesmo que muitas vezes tenham dificuldade em solicitar a ela própria ou aos seus colegas. Outra situação que facilita na metodologia colaborativa que a professora Maria busca para suas aulas é que as respostas do fórum podem ser enviadas para bate-papos privados ou para grupos específicos de estudantes que participam desta disciplina ou fazem parte da universidade, como veteranos dos estudantes na disciplina de introdução às práticas de programação, por exemplo. Portanto, Maria espera que os estudantes possam compartilhar suas respostas com outros colegas específicos que queiram para ajudar ou para solicitar ajuda de colegas e veteranos da disciplina.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegase/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>1.2 Ferramenta para que estudantes consigam dialogar com colegas e/ou professores individualmente.</td>
+                    </tr>
+                    <tr>
+                    <td>1.3 Ferramenta para que estudantes exponham dúvidas ou possam responder dúvidas de colegas.</td>
+                    </tr>
+                    <tr>
+                    <td>2.1 Ferramenta para que estudantes realizem avaliação por pares.</td>
+                    </tr>
+                    <tr>
+                    <td>2.2 Ferramenta para que estudantes consigam opinar, debater e receber críticas dos trabalhos desenvolvidos.</td>
+                    </tr>
+                    <tr>
+                    <td>7.1 Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela2.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>    
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 2: José</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Estudante, 23 anos, graduando em ciência da computação. José estuda na universidade que Maria leciona e, inclusive, é aluno dela na disciplina de introdução às técnicas de programação. José está em seu primeiro contato com o ensino superior, tendo escolhido o curso após muita análise em relação ao seu futuro financeiro. José não possui conhecimento prévio sobre a área de computação e espera ganhar seu conhecimento no decorrer do curso superior.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> José está resolvendo os exercícios propostos pela professora Maria em sua casa, utilizando seu computador pessoal. José está logado no ambiente virtual de aprendizagem da universidade e especificamente construindo sua resolução de um exercício no próprio fórum que a professora disponibilizou para que as respostas fossem enviadas. José decide enviar suas respostas de forma privada, apenas para a professora, pois não possui muita garantia de que a forma que resolveu é uma forma correta para a resolução do problema. Porém, José decide enviar para um grupo privado que tem com outros três colegas que costuma dividir dúvidas em suas disciplinas, todos eles estão no mesmo semestre. José acredita que assim conseguira ajudar seus amigos e também melhorar sua entrega para reenviar uma nova resolução antes do prazo finalizar. José, por ter desenvolvido toda a resolução no AVA, decide salvar ela em um repositório pessoal que tem no próprio AVA, facilitando para que, caso seja útil futuramente, possa encontrar o arquivo rapidamente.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegase/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>2.2 Ferramenta para que estudantes consigam opinar, debater e receber críticas dos trabalhos desenvolvidos.</td>
+                    </tr>
+                    <tr>
+                    <td>3.1 Ferramenta para que estudantes armazenem seus trabalhos, arquivos, provas e outras informações das disciplinas cursadas.</td>
+                    </tr>
+                    <tr>
+                    <td>5.1 Ferramenta para que estudantes possam armazenar informações pessoais e de interesse próprio.</td>
+                    </tr>
+                    <tr>
+                    <td>5.2 Ferramenta para que estudantes consigam compartilhar suas informações armazenadas.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela3.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela4.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela5.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>  
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 3: André</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Estudante, 33 anos, formado em publicidade, graduando em ciência da computação. André possui graduação em publicidade e atua no ramo desde sua graduação, cerca de 10 anos atrás. André tem contato com profissionais da área da tecnologia da computação diariamente porém não possui contato com nenhuma teoria ou prática da área. André, inclusive, tem entre seus amigos mais próximos, diversos profissionais de TI. André decidiu, por influência de seus amigos e perspectiva de melhoria em seu ganho profissional, cursar ciência da computação. André é aluno de Maria em introdução à técnicas computacionais.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> André também está resolvendo o mesmo exercício de José e também está utilizando o ambiente virtual de aprendizagem para criar sua resolução e enviar no fórum disponibilizado pela docente. André também não tem confiança em sua resolução e portanto também decide solicitar ajuda. Porém, André salva seu arquivo na sua pasta pessoal do ambiente virtual de aprendizagem antes de enviá-lá no fórum e, estando salva em sua pasta, decide compartilhar com amigos profissionais da área de computação que não fazem parte da disciplina, do curso ou mesmo da universidade. Ele compartilha a resolução em outra mídia social para que seus amigos possam opinar. Após ter enviado e recebido comentários positivos de seus amigos, André envia o arquivo que havia salvo em sua pasta pessoal para o fórum de forma aberta para seus outros colegas poderem ter acesso também. </td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>3.1 Ferramenta para que estudantes armazenem seus trabalhos, arquivos,provas e outras informações das disciplinas cursadas.</td>
+                    </tr>
+                    <tr>
+                    <td>3.2 Ferramenta para que estudantes consigam transferir informações adquiridas em outros ambientes virtuais.</td>
+                    </tr>
+                    <tr>
+                    <td>5.1 Ferramenta para que estudantes possam armazenar informações pessoais e de interesse próprio.</td>
+                    </tr>
+                    <tr>
+                    <td>5.2 Ferramenta para que estudantes consigam compartilhar suas informações armazenadas.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela6.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela7.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela8.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 4: Creuza</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Professora, 40 anos, formada em sistemas da informação, mestre. Creuza é professora efetiva de uma universidade há quase 20 anos. Tem lecionado disciplinas de lógica de programação e prática em programação. Creuza utiliza exercícios que buscam a resolução de problema a partir da programação como forma de prática para seus conteúdos teóricos. Creuza é professora de múltiplos cursos, tanto os cursos da área de tecnologia da informação quanto cursos da área de exatas no geral. Creuza leciona na mesma universidade que Maria. Creuza tenta modificar os problemas que disponibiliza aos estudantes resolverem, porém sempre utilizando o mesmo método de exercícios.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b>Creuza, em conversa com a professora Maria, se interessou pela metodologia colaborativa que a professora Maria estava aplicando na rotina prática da disciplina. Sem muito contato prévio ou conhecimento sobre metodologias ativas, Creuza decide, ao invés de aplicar a colaboração em um processo completo da disciplina, aplicar a colaboração no trabalho final da disciplina. Para isso, Creuza também passou a utilizar o ambiente virtual de aprendizagem da universidade e lá colocou os objetivos e todas as outras especificações necessárias para os alunos realizarem o trabalho. As mudanças, desta vez, foram que Creuza possibilitou que o trabalho fosse realizado em grupos de até quatro alunos e adicionou uma segunda etapa ao trabalho: após um grupo realizar sua entrega, ele deveria fazer uma avaliação da entrega de trabalho do grupo que havia enviado anteriormente, sendo metade da nota para o envio do próprio trabalho e metade da nota para a avaliação do outro grupo. Sendo assim, todos os trabalhos enviados estavam disponibilizados publicamente para todos os estudantes da disciplina naquele semestre. Ao finalizar toda a descrição do trabalho final, Creuza disponibilizou aos estudantes o trabalho, colocando a data de início e final de envio no calendário geral da disciplina para que nenhum estudante perdesse os prazos de entrega. </td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>2.1 Ferramenta para que estudantes realizem avaliação por pares.</td>
+                    </tr>
+                    <tr>
+                    <td>2.2 Ferramenta para que estudantes consigam opinar, debater e receber críticas dos trabalhos desenvolvidos.</td>
+                    </tr>
+                    <tr>
+                    <td>6.1 Ferramenta para que estudantes possam gerenciar datas, planos, prazos e cronogramas de atividades, disciplinas, trabalhos e provas.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela9.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 5: Regina</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Estudante, 45 anos, técnica em informática, graduanda em sistemas de informação. Regina decidiu, após um longo período afastada das salas de aula, iniciar seu curso superior na área de tecnologia da informação. Regina é mãe de dois filhos e casada há 25 anos. Regina trabalha na área de computação desde o fim do ensino médio, tendo amplo conhecimento em informática, em programação e em outras áreas da computação. Seu conhecimento inicial foi adquirido em um técnico de informática e hoje atua como gestora de um grupo de programação de uma empresa privada. Decidiu que iria cursar sistemas de informação após ter um tempo livre que antes era dedicado a sua família. Ela é aluna de Creuza em introdução à programação.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> Regina, por ter uma idade que destoa dos outros colegas, que no geral são estudantes que acabaram de finalizar o ensino médio, não tinha um grupo prévio para se integrar no trabalho final. Apesar disso, Regina é uma das estudantes que melhor conhecimento possui e que tem registrado as melhores entregas da disciplina até então. Por isso, Regina decidiu que procuraria um grupo para se integrar ao invés de fazer a resolução sozinha. Ela abriu um fórum onde pode expor que estava em busca de companheiros para o desenvolvimento do trabalho final. Rapidamente outros estudantes responderam Regina avisando-a que gostariam de formar grupo com ela. Regina criou então um grupo privado com os três primeiros estudantes que a responderam e eles oficializaram o trabalho conjunto. Regina fez diversas trocas com seus colegas, conseguindo passar seus conhecimentos e também adquirir novos conhecimentos a partir de seus colegas, tudo dentro do grupo privado. Tendo em vista a boa colaboração entre os quatro colegas, eles não precisaram de nenhuma ajuda externa ao grupo e utilizaram a todo o momento o grupo privado entre os quatro. Quando finalizada, a resolução foi enviada para a posterior avaliação da docente e do outro grupo de colegas.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>7.1 Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela10.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela11.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 6: Vani</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Estudante, 18 anos, graduanda em ciência da computação. Vani iniciou sua trajetória no ensino superior no ano seguinte a sua formação no ensino médio. Sua escolha de curso se deu por ter tido contato durante sua adolescência com a área, a qual Vani demonstrou bastante curiosidade e interesse. Apesar de nova, Vani demonstra bastante tranquilidade nas suas primeiras disciplinas, de lógica e de introdução à programação. Vani é uma entusiasta da área e além disso tem buscado por fóruns que discutem a área, debate em fóruns online sobre programação e busca ter um papel ativo em sua futura profissão. Vani é aluna de Maria em introdução à programação.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> Vani decidiu rapidamente seu grupo de estudo para a realização do trabalho final da disciplina da professora Creuza, sendo que Bruno é um dos integrantes do grupo. Vani pegou a liderança de forma natural, considerando seu conhecimento na área. Ela abriu um fórum particular apenas para o grupo, para que pudessem compartilhar conteúdo e informação no desenvolvimento do trabalho. Tentando ajudar seus colegas a compreenderem uma parte do trabalho, Vani usou uma ferramenta do ambiente virtual de aprendizagem para colocar três códigos lado a lado que faziam o mesmo processo de estrutura de repetição, mas utilizando lógicas diferentes. Assim ela pode demonstrar e ajudar seus colegas a compreenderem o que havia feito, ganhando novos conhecimentos.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>3.1 Ferramenta para que estudantes armazenem seus trabalhos, arquivos, provas e outras informações das disciplinas cursadas.</td>
+                    </tr>
+                    <tr>
+                    <td>4.2 Ferramenta para que estudantes consigam comparar e visualizar diferenças e semelhanças entre informações.</td>
+                    </tr>
+                    <tr>
+                    <td>4.3 Ferramenta para que estudantes consigam simular e analisar cenários e alternativas.</td>
+                    </tr>
+                    <tr>
+                    <td>7.1 Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela12.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela13.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+
+                <table class="table table-striped table-hover mb-5">
+                    <thead>
+                    <tr class="table-primary">
+                        <th colspan="1">Cenário 7: Bruno</th>
+                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><b>Descrição da Persona:</b> Estudante, 18 anos, graduando em ciência da computação. Bruno é outro estudante de Maria que decidiu cursar o ensino superior na sequência do ensino médio. Bruno e Vani se conheciam anteriormente, porém não tinham desenvolvido amizade. Na graduação, Bruno e Vani tem se tornado amigos e realizado os trabalhos em conjunto. Diferente de Vani, Bruno não possui conhecimento prévio em computação, tampouco é um entusiasta da área. A escolha de Bruno para a área de tecnologia de informação se deu por influência de seus pais, que acreditaram que seria uma boa graduação a se cursar pensando no retorno financeiro futuro.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Descrição da Situação:</b> Bruno faz parte do grupo de Vani no trabalho final da disciplina de Creuza. Ele é bastante organizado e por isso criou um calendário para que ele e seus colegas de grupo consigam gerenciar corretamente as entregas para a professora. Apesar de sua boa organização, Bruno ainda tem dificuldade na compreensão da disciplina e a ajuda de Vani é de grande valia para ele. Após ela ter comparado códigos, Bruno conseguiu entender melhor como funciona uma estrutura de repetição. Percebendo que poderia utilizar as ferramentas do ambiente virtual de aprendizagem para apoiar sua aprendizagem, ele decidiu pegar um código disponibilizado pela professora Creuza e transformá-lo em fluxograma, antes apenas disponível em uma linguagem de programação. Fez isto para ajudar os outros dois colegas dele e de Vani à compreender de forma completa a estrutura de repetição, que ainda estava confusa aos dois. Assim, os quatro colegas conseguiram se auxiliar nas dificuldades e dúvidas e desenvolver o trabalho em conjunto, caminhando lado a lado.</td>
+                    </tr>
+                    <tr>
+                    <td><b>Recursos úteis:</b></td>
+                    </tr>
+                    <tr>
+                    <td>1.1 Ferramenta para que estudantes criem grupos de estudo com seus colegas e/ou professores.</td>
+                    </tr>
+                    <tr>
+                    <td>3.1 Ferramenta para que estudantes armazenem seus trabalhos, arquivos, provas e outras informações das disciplinas cursadas.</td>
+                    </tr>
+                    <tr>
+                    <td>4.1 Ferramenta para que estudantes criem múltiplas representações dos conteúdos sendo pensados e aprendidos.</td>
+                    </tr>
+                    <tr>
+                    <td>4.2 Ferramenta para que estudantes consigam comparar e visualizar diferenças e semelhanças entre informações.</td>
+                    </tr>
+                    <tr>
+                    <td>4.3 Ferramenta para que estudantes consigam simular e analisar cenários e alternativas.</td>
+                    </tr>
+                    <tr>
+                    <td>6.1 Ferramenta para que estudantes possam gerenciar datas, planos, prazos e cronogramas de atividades, disciplinas, trabalhos e provas.</td>
+                    </tr>
+                    <tr>
+                    <td>7.1 Ferramenta para que estudantes e professores possam debater assuntos, conteúdos e atividades.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela14.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela15.png">
+                                Abrir tela
+                            </a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela16.png">
+                                Abrir tela
+                            </a>
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="telas">
+        <div class="row">
+            <div class="col">
+                <h1 class="pt-5">Telas</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Tela inicial</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela1.png">
+                            <img src="imagens/tela1.png" class="img-fluid img-thumbnail" alt="Tela 1">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 1</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela2.png">
+                            <img src="imagens/tela2.png" class="img-fluid img-thumbnail" alt="Tela 2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 2</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela3.png">
+                            <img src="imagens/tela3.png" class="img-fluid img-thumbnail" alt="Tela 3">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela4.png">
+                            <img src="imagens/tela4.png" class="img-fluid img-thumbnail" alt="Tela 4">
+                        </a>
+                    </div><div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela5.png">
+                            <img src="imagens/tela5.png" class="img-fluid img-thumbnail" alt="Tela 5">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 3</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela6.png">
+                            <img src="imagens/tela6.png" class="img-fluid img-thumbnail" alt="Tela 6">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela7.png">
+                            <img src="imagens/tela7.png" class="img-fluid img-thumbnail" alt="Tela 7">
+                        </a>
+                    </div><div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela8.png">
+                            <img src="imagens/tela8.png" class="img-fluid img-thumbnail" alt="Tela 8">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 4</h2></div>
+                </div>
+                <div class="row">
+                    </div><div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela9.png">
+                            <img src="imagens/tela9.png" class="img-fluid img-thumbnail" alt="Tela 9">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 5</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela10.png">
+                            <img src="imagens/tela10.png" class="img-fluid img-thumbnail" alt="Tela 10">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela11.png">
+                            <img src="imagens/tela11.png" class="img-fluid img-thumbnail" alt="Tela 11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 6</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela12.png">
+                            <img src="imagens/tela12.png" class="img-fluid img-thumbnail" alt="Tela 12">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela13.png">
+                            <img src="imagens/tela13.png" class="img-fluid img-thumbnail" alt="Tela 13">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col py-3">
+                <div class="row">
+                    <div class="col"><h2>Cenário 7</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela14.png">
+                            <img src="imagens/tela14.png" class="img-fluid img-thumbnail" alt="Tela 14">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela15.png">
+                            <img src="imagens/tela15.png" class="img-fluid img-thumbnail" alt="Tela 15">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="imagens/tela16.png">
+                            <img src="imagens/tela16.png" class="img-fluid img-thumbnail" alt="Tela 16">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+
+        <div class="row">
+        <!-- Informações de Copyright -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
+            <h5 class="text-uppercase">© 2025 Leonam Oliveira</h5>
+            <p class="mb-0">
+            Todos os direitos reservados.
+            </p>
+        </div>
+
+        <!-- Informações de Contato -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-end">
+            <h5 class="text-uppercase">Contato</h5>
+            <ul class="list-unstyled mb-0">
+                <li>Email: <a href="mailto:leonam@ufpr.br">leonam@ufpr.br</a></li>
+                <li>Telefone: <a href="tel:+550000000000">+55 (00) 0000-0000</a></li>
+                <li>GitHub: <a href="https://github.com/leonam-oliveira" target="_blank">@leonam-oliveira</a></li>
+            </ul>
+        </div>
+        </div>
+
     </div>
-  </header>
 
-  <section id="sobre" class="container">
-    <h2>Sobre o CaPE</h2>
-    <p>O CaPE, Collaboration and Practice Environmentm, ou Ambiente de Colaboração e Prática é um arcabouço de quatro fases, dividido em Requisitos, Recursos, Ações e Cenários, para propor a colaboração em Ambientes Virtuais de Aprendizagem.A base teórica do arcabouço parte dos estudos de Etienne Wenger na teoria de Aprendizagem Situada e suas Comunidades de Prática.</p>
-  </section>
-
-  <section id="projetos" class="container">
-    <h2>Fases do CaPE</h2>
-    <ul>
-      <li><strong>Componentes:</strong>  </li>
-      <li><strong>Requisitos:</strong> Os requisitos partiram do estudo de Wenger (1999), em que o autor consolida o processo das comunidades de prática a partir de três eixos: engajamento, imaginação e alinhamento. Foram criados sete requisitos a partir dos componentes, cada requisito representando um componente específico. </li>
-      <li><strong>Recursos:</strong> A partir dos requisitos, foram criados os recursos. Os recursos representam ferramentas computacionais que podem ser aplicadas nos AVAs. São 14 recursos criados a partir dos requisitos.</li>
-      <li><strong>Ações:</strong> As ações trazem exemplificações possíveis de diferentes papeis do processo educacional, como docente, colega de classe e veteranos de cursos.</li>
-      <li><strong>Cenários:</strong> Os cenários trazem um uso prático dos recursos. Foram criadas sete personas e para cada uma foi feita uma descrição da persona e uma descrição de cenário, sendo que cada persona era protagonista de um e os outros participantes participavam de forma coadjuvante.</li>
-      <li><strong>Telas:</strong> As Telas criadas representam a utilização de um possível Ambiente Virtual de Aprendizagem com os recursos do CaPE pelas personas e as situações vividas nos Cenários. </li>
-    </ul>
-  </section>
-
-  <img width="960" height="540" alt="Ciclo do CaPE" src="https://github.com/user-attachments/assets/6e06f6ae-59c8-4639-8bd5-aeacf70afcc1" />
-
-  <section id="contato" class="container">
-    <h2>Contato</h2>
-    <p>Email: leonam@ufpr.br</p>
-    <p>GitHub: <a href="https://github.com/seuusuario" target="_blank">@leonam-oliveira</a></p>
-  </section>
-
-
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 - Leonam Oliveira</p>
+    <div class="text-center p-3 bg-secondary text-white">
+        Desenvolvido por Leonam Oliveira — <a class="text-white text-decoration-underline" href="#">Voltar ao topo</a>
     </div>
-  </footer>
-</body>
+    </footer>
+
+    <button id="btnTopo" class="btn btn-primary" title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Imagem em tamanho grande">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        const placeholder = document.getElementById('navbar-placeholder');
+        const navbarOffsetTop = navbar.offsetTop;
+        const titulo = document.getElementById('titulo-apresentacao');
+
+        window.addEventListener('scroll', () => {
+        if (window.scrollY >= navbarOffsetTop) {
+            navbar.classList.add('fixed-top', 'shadow');
+            titulo.classList.add('pt-5')
+            placeholder.style.display = 'block';
+        } else {
+            navbar.classList.remove('fixed-top', 'shadow');
+            titulo.classList.remove('pt-5');
+            placeholder.style.display = 'none';
+        }
+        });
+    </script>
+    <script>
+        const btn = document.getElementById("btnTopo");
+
+        // Mostrar ou esconder botão conforme scroll
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+            btn.style.display = "block";
+            } else {
+            btn.style.display = "none";
+            }
+        });
+
+        // Scroll suave ao clicar no botão
+        btn.addEventListener("click", () => {
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            });
+        });
+    </script>
+    <script>
+        const imageLinks = document.querySelectorAll('[data-bs-target="#imageModal"]');
+        imageLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                const imageUrl = this.getAttribute('data-bs-image');
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = imageUrl;
+            });
+        });
+    </script>
+
+  </body>
 </html>
